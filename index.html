@@ -4,10 +4,36 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <script>
+      function validateForm() {
+        let fname = document.querySelector("#fname").value;
+        let lname = document.querySelector("#lname").value;
+        let email = document.querySelector("#email").value;
+        let age = document.querySelector("#age").value;
 
-    <script src="js/koodit.js"></script>
+        console.log(fname, lname, email, age);
+
+        if (fname == "") {
+          document.querySelector("#fname").value = "Ei saa olla tyhjä!";
+          document.querySelector("#fname").style.color = "red";
+          document.querySelector("#fname").style.borderColor = "red";
+          return false;
+        }
+        if (lname == "" || lname.length < 3) return false;
+
+        return true;
+      }
+    </script>
   </head>
   <body>
-    JavaScript on mukavaa! Jippiaijee!
+    <form onsubmit="return validateForm()">
+      <label for="firstname">First name:</label
+      ><input id="fname" type="text" /> <br />
+      Lastname: <input id="lname" type="text" /> <br />
+      email: <input id="email" type="email" /> <br />
+      Age: <input id="age" type="number" min="0" max="130" /> <br />
+      Date: <input type="date" />
+      <input type="submit" value="Send" />
+    </form>
   </body>
 </html>
