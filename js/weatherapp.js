@@ -24,16 +24,24 @@ function parsiData(data){
    let html = 
    `
    <h1>Sääsovellus v. 1.1 </h1>
-   <table border="1">
+   <table border="1" width="100%">
     <tr>
         <td>City</td>
         <td>${json.name}</td>
     </tr>
         <td>Temp</td>
-        <td>${json.main.temp}</td>
+        <td>${json.main.temp} &deg;C </td>
     </tr>
         <td>Description</td>
         <td>${json.weather[0].main}</td>
+    </tr>
+    </tr>
+        <td>Wind</td>
+        <td>${json.wind.speed} m/s</td>
+    </tr>
+    </tr>
+        <td>Icon</td>
+        <td><img src="http://openweathermap.org/img/w/${json.weather[0].icon}.png"></td>
     </tr>
    </table>
    `
