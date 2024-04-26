@@ -1,4 +1,4 @@
-let url = "http://api.openweathermap.org/data/2.5/weather?q=Helsinki&units=metric&mode=json&APPID=ff64c247a136f706923d1ee0d55d71e2"
+let url = "https://api.openweathermap.org/data/2.5/weather?q=Helsinki&units=metric&mode=json&APPID=ff64c247a136f706923d1ee0d55d71e2"
 
 // Luodaan ja lähetetään AJAX kutsu
 var xmlhttp = new XMLHttpRequest();
