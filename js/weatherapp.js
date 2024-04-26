@@ -8,6 +8,36 @@ xmlhttp.send();
 xmlhttp.onreadystatechange=function() {
     if (xmlhttp.readyState==4 && xmlhttp.status==200){
         // Tulostetaan se ruudulle
-        document.write( xmlhttp.responseText)
+       // document.write( xmlhttp.responseText)
+        // Kutsutaan funktiota joka hoitaa loput
+        parsiData( xmlhttp.responseText );
   }
+}
+
+function parsiData(data){
+
+    // Muutetaan teksti JSONiksi
+    json = JSON.parse( data )
+    // console.log( json.name, json.main.temp, json.weather[0].main )
+
+    // Esitellään ulkoasu muuttujan sisälle
+   let html = 
+   `
+   <h1>Sääsovellus v. 1.1 </h1>
+   <table border="1">
+    <tr>
+        <td>City</td>
+        <td>${json.name}</td>
+    </tr>
+        <td>Temp</td>
+        <td>${json.main.temp}</td>
+    </tr>
+        <td>Description</td>
+        <td>${json.weather[0].main}</td>
+    </tr>
+   </table>
+   `
+   // Tulostetaan ruudulle
+   document.write(html)
+
 }
