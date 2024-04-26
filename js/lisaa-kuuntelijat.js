@@ -10,3 +10,13 @@ function teeAsioita() {
 let nappi = document.querySelector('button')
 nappi.addEventListener("click", teeAsioita)
 
+/* 
+// kuuntelija ja funktion määritys samassa
+ nappi.addEventListener("click", function(){ 
+  let kuva = document.querySelector("img");
+    kuva.src =
+      "https://upload.wikimedia.org/wikipedia/commons/f/fd/Bristol.zoo.western.lowland.gorilla.arp.jpg";
+    kuva.style.border = "solid 3px black";
+    console.log("Kuva on vaihdettu!");
+})
+*/
