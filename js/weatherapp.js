@@ -32,8 +32,8 @@ function parsiData(data) {
 
   // Esitellään ulkoasu muuttujan sisälle
   let html = `
-   <h1>Sääsovellus v. 1.1 </h1>
-   <table border="1" width="100%">
+   
+   <table border="1" width="100%" class="table table-striped">
     <tr>
         <td>City</td>
         <td>${json.name}</td>
